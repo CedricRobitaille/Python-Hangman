@@ -42,7 +42,7 @@ def gameStart():
   print("Loading word...")
   ## Get fetch request to the api. Ending with a json parser.
   ## Results from response comes in as ['word']
-  response = requests.get("https://random-word-api.vercel.app/api?words=1").json()
+  response = requests.get("https://random-word-api.vercel.app/api?words=1&length=" + str(word_size)).json()
   ## response[0] will then return the single word outside of the array.
   global word
   word = response[0]
